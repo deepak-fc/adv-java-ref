@@ -1,0 +1,36 @@
+View all methods in a class Java
+///////////////////////////////////////////////////////////////
+import java.util.*;
+import java.lang.reflect.Method;
+
+class tricks {
+    public static void main(String[] args) {
+        Class obj = ArrayList.class;
+        Method[] methods = obj.getMethods();
+        for(Method m: methods) {
+            System.out.println(m.getName());
+        }
+    }
+}
+///////////////////////////////////////////////////////////////
+
+Run .sql file from mysql console
+mysql> source [path of .sql file]
+
+///////////////////////////////////////////////////////////////
+Steps for JDBC [Only Linux]
+
+1) Run MySQL from Linux
+	
+	- Start MySQL server - service mysqld start
+	- Launch MySQL console - mysql -u root
+
+2) Set Classpath in Java so it looks for the JAR file
+	
+	(For compiling with the required JAR File)
+	- javac -cp .:[path to JAR] [Java File Name]
+	
+	(For running with the required JAR File)
+	- java -cp .:[path to JAR] [Java Class File Name]
+///////////////////////////////////////////////////////////////
+
